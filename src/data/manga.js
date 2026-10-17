@@ -29,7 +29,7 @@ title: "Otome game Sekai Mob season 2",
 slug: "Otome game sekai Mob season 2",
 genre: "Action, Fantasy, Romance, Comedy, Adventure, Isekai, Mecha, Reincarnation, School",
 synopsis:"Melanjutkan kisah Leon Fou Bartfort yang bereinkarnasi ke dunia gim otome yang sangat tidak adil bagi kaum pria. Setelah berhasil mengubah alur cerita gim dan menjadi seorang bangsawan, Leon justru terseret ke dalam berbagai masalah baru ketika ditunjuk sebagai pengawal Marie yang telah menjadi Santa. Di tengah intrik politik dan konflik yang mengancam Kerajaan Holfort, Leon harus kembali mengandalkan pengetahuan dari kehidupan sebelumnya untuk menghadapi berbagai tantangan yang menghalangi keinginannya menjalani hidup tenang.",
-cover: "https://cdn.myanimelist.net/images/anime/1161/121462l.jpg",
+cover: "https://cdn.myanimelist.net/images/anime/1285/158337l.jpg",
 },
 {
 id: 5,
