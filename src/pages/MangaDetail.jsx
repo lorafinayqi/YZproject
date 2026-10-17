@@ -114,7 +114,7 @@ function MangaDetail() {
                   rel="noopener noreferrer"
                   className="shrink-0 rounded-lg bg-orange-500 px-3 py-2 text-sm font-semibold hover:bg-orange-600"
                 >
-                  Watch →
+                  Link →
                 </a>
               </div>
             ))}
