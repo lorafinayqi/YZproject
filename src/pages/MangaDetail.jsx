@@ -110,7 +110,7 @@ function MangaDetail() {
               >
                 <div>
                   <h3 className="font-medium">
-                    Video {chapter.id}
+                    Episode {chapter.id}
                   </h3>
 
                   <p className="mt-1 text-xs text-gray-500">
