@@ -3,6 +3,7 @@ import { mangaList } from "../data/manga";
 
 // Masukkan link Google Drive untuk setiap chapter di sini.
 const chapterData = {
+<<<<<<< HEAD
   "Hitoribocchi no Isekai Kouryaku": [
     {
       id: 1,
@@ -14,17 +15,29 @@ const chapterData = {
     },
   ],
   "Girl und Panzer Motto motto Love sakusen": [
+=======
+  "hitori": [
+>>>>>>> e1f2e59e5ef6e9a44d3a70355ab8042ba618979e
     {
       id: 1,
       driveUrl: "https://drive.google.com/drive/my-drive",
     },
   ],
+<<<<<<< HEAD
     "Otaku ni Yasashii Gal wa Inai": [
     {
       id: 1,
       driveUrl: "https://drive.google.com/drive/my-drive",
     },
   ]
+=======
+  "one-piece": [
+    {
+      id: 20,
+      driveUrl: "https://drive.google.com/drive/my-drive",
+    },
+  ],
+>>>>>>> e1f2e59e5ef6e9a44d3a70355ab8042ba618979e
 };
 
 function MangaDetail() {
@@ -124,14 +137,22 @@ function MangaDetail() {
                   rel="noopener noreferrer"
                   className="shrink-0 rounded-lg bg-orange-500 px-3 py-2 text-sm font-semibold hover:bg-orange-600"
                 >
+<<<<<<< HEAD
                   Baca →
+=======
+                  Link →
+>>>>>>> e1f2e59e5ef6e9a44d3a70355ab8042ba618979e
                 </a>
               </div>
             ))}
           </div>
         ) : (
           <p className="rounded-xl border border-gray-800 bg-gray-900 p-5 text-gray-400">
+<<<<<<< HEAD
             Link chapter belum ditambahkan.
+=======
+            Link belum ditambahkan.
+>>>>>>> e1f2e59e5ef6e9a44d3a70355ab8042ba618979e
           </p>
         )}
       </section>
