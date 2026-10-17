@@ -121,7 +121,7 @@ function MangaDetail() {
           </div>
         ) : (
           <p className="rounded-xl border border-gray-800 bg-gray-900 p-5 text-gray-400">
-            Link chapter belum ditambahkan.
+            Link belum ditambahkan.
           </p>
         )}
       </section>
