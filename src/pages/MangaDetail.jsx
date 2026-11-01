@@ -32,6 +32,7 @@ const chapterData = {
       links: [
         { name: "Link Bluraynime", url: "https://bluraynime.my.id/?search=%5BBluraynime%5D+Silent+Witch+%3A+Chinmoku+no+Majo+no+Kakushigoto+%28BD+1080p%29" },
         { name: "Uptobox", url: "https://uptobox.com/" },
+        { name: "Uptobox", url: "https://uptobox.com/" },
       ],
     },
   ],
@@ -39,6 +40,30 @@ const chapterData = {
   "Otaku ni Yasashii Gal wa Inai": [
     {
       id: 1,
+      links: [
+        { name: "Google Drive", url: "https://drive.google.com/drive/my-drive" },
+        { name: "Uptobox", url: "https://uptobox.com/" },
+      ],
+    },
+  ],
+  
+   "Otome Game Sekai wa Mob ni Kibishii Sekai desu 2": [
+    {
+      id: 1,
+      links: [
+        { name: "Google Drive", url: "https://drive.google.com/drive/my-drive" },
+        { name: "Uptobox", url: "https://uptobox.com/" },
+      ],
+    },
+    {
+      id: 2,
+      links: [
+        { name: "Google Drive", url: "https://drive.google.com/drive/my-drive" },
+        { name: "Uptobox", url: "https://uptobox.com/" },
+      ],
+    },
+    {
+      id: 3,
       links: [
         { name: "Google Drive", url: "https://drive.google.com/drive/my-drive" },
         { name: "Uptobox", url: "https://uptobox.com/" },

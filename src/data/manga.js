@@ -18,8 +18,8 @@ export const mangaList = [
   },
   {
     id: 4,
-    title: "Otome game Sekai Mob season 2",
-    slug: "Otome game sekai Mob season 2",
+    title: "Otome Game Sekai wa Mob ni Kibishii Sekai desu 2",
+    slug: "Otome Game Sekai wa Mob ni Kibishii Sekai desu 2",
   },
   {
     id: 5,
