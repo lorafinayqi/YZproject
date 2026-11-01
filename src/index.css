@@ -3,44 +3,46 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  color: #fff;
-  background: #170817;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  scroll-behavior: smooth;
+  --pink-primary: #f45ba5;
+  --pink-dark: #db3989;
+  --pink-light: #fff0f6;
+  --pink-bg: #fff7fb;
+  --pink-border: #fce0ed;
+  --text-main: #493545;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background: #170817;
+  background-color: var(--pink-bg);
+  color: var(--text-main);
 }
 
-::selection {
-  color: white;
-  background: #db2777;
+/* Smooth transition */
+button,
+a,
+input,
+.card {
+  transition: all 0.3s ease;
 }
 
+/* Anime image */
+.anime-card img {
+  transition: transform 0.4s ease;
+}
+
+.anime-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: #170817;
-}
-
 ::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-  background: #be185d;
+  background: #f4a6c8;
+  border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #ec4899;
+::-webkit-scrollbar-track {
+  background: #fff0f6;
 }

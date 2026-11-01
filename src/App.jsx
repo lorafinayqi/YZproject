@@ -9,107 +9,97 @@ import MangaDetail from "./pages/MangaDetail";
 import Reader from "./pages/Reader";
 
 function Home() {
-const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
-const filteredManga = mangaList.filter((manga) =>
-manga.title.toLowerCase().includes(search.toLowerCase())
-);
+  const filteredManga = mangaList.filter((manga) =>
+    manga.title.toLowerCase().includes(search.toLowerCase())
+  );
 
-return (
-<>
-<Navbar />
+  return (
+    <>
+      <Navbar search={search} setSearch={setSearch} /> 
 
-  <main className="mx-auto max-w-7xl px-4 py-8">
-    <section className="mb-10 rounded-2xl bg-gradient-to-r from-orange-950 to-gray-900 p-6 sm:p-10">
-      <p className="mb-3 text-sm font-bold uppercase tracking-widest text-orange-400">
-        Your Anime destination
-      </p>
+      <main className="mx-auto max-w-7xl px-4 py-8">
+        <section className="mb-10 rounded-2xl bg-linear-to-r from-pink-200 via-pink-100 to-white p-6 text-[#493545] shadow-sm sm:p-10">
+          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-pink-600">
+            Your Anime Destination
+          </p>
 
-      <h1 className="text-3xl font-black sm:text-5xl">
-        Temukan Anime Favoritmu
-      </h1>
+          <h1 className="text-3xl font-black sm:text-5xl">
+            Temukan Anime Favoritmu
+          </h1>
 
-      <p className="mt-4 text-gray-300">
-        Jelajahi berbagai judul Anime.
-      </p>
-    </section>
+          <p className="mt-4 text-[#765D6D]">
+            Jelajahi berbagai judul Anime.
+          </p>
+        </section>
 
-    <section id="latest">
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-        <h2 className="text-2xl font-bold">
-          Anime Terbaru
-        </h2>
+        <section id="latest">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <h2 className="text-2xl font-bold text-[#493545]">
+              Anime Terbaru
+            </h2>
+          </div>
 
-        <input
-          type="search"
-          placeholder="Cari manga..."
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-          className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 outline-none focus:border-orange-400 sm:w-64"
-        />
-      </div>
-
-      {filteredManga.length > 0 ? (
-        <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {filteredManga.map((manga) => (
-            <MangaCard key={manga.id} manga={manga} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-gray-400">
-          Anime tidak ditemukan.
-        </p>
-      )}
-    </section>
-  </main>
-</>
-
-);
+          {filteredManga.length > 0 ? (
+            <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {filteredManga.map((manga) => (
+                <MangaCard key={manga.id} manga={manga} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-[#9B8292]">
+              Anime tidak ditemukan.
+            </p>
+          )}
+        </section>
+      </main>
+    </>
+  );
 }
 
 function App() {
-return (
-<BrowserRouter>
-<div className="min-h-screen bg-gray-950 text-white">
-<Routes>
-<Route path="/" element={<Home />} />
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-[#FFF7FB] text-[#493545]">
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-      <Route
-        path="/manga/:slug"
-        element={<MangaDetail />}
-      />
+          <Route
+            path="/manga/:slug"
+            element={<MangaDetail />}
+          />
 
-      <Route
-        path="/manga/:slug/:chapter"
-        element={<Reader />}
-      />
+          <Route
+            path="/manga/:slug/:chapter"
+            element={<Reader />}
+          />
 
-      <Route
-        path="*"
-        element={
-          <main className="p-10 text-center text-white">
-            <h1 className="text-2xl font-bold">
-              Halaman tidak ditemukan
-            </h1>
+          <Route
+            path="*"
+            element={
+              <main className="p-10 text-center text-[#493545]">
+                <h1 className="text-2xl font-bold">
+                  Halaman tidak ditemukan
+                </h1>
 
-            <a
-              href="/"
-              className="mt-4 inline-block text-orange-400 hover:underline"
-            >
-              Kembali ke Home
-            </a>
-          </main>
-        }
-      />
-    </Routes>
+                <a
+                  href="/"
+                  className="mt-4 inline-block text-pink-500 hover:text-pink-700 hover:underline"
+                >
+                  Kembali ke Home
+                </a>
+              </main>
+            }
+          />
+        </Routes>
 
-    <footer className="border-t border-gray-800 px-4 py-8 text-center text-sm text-gray-500">
-      YZProject 
-    </footer>
-  </div>
-</BrowserRouter>
-
-);
+        <footer className="border-t border-pink-100 px-4 py-8 text-center text-sm text-[#A18B9A]">
+          YZProject
+        </footer>
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
