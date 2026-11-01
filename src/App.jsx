@@ -13,6 +13,7 @@ function Home() {
   const [mangaList, setMangaList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -45,6 +46,12 @@ function Home() {
   const filteredManga = mangaList.filter((manga) =>
     manga.title.toLowerCase().includes(search.toLowerCase())
   );
+
+ const displayedManga = search.trim()
+  ? filteredManga
+  : showAll
+    ? filteredManga
+    : filteredManga.slice(0, 6);
 
   return (
     <>
@@ -80,12 +87,27 @@ function Home() {
             <p className="py-10 text-center text-red-400">
               Gagal mengambil data anime. Silakan coba lagi.
             </p>
-          ) : filteredManga.length > 0 ? (
-            <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {filteredManga.map((manga) => (
-                <MangaCard key={manga.id} manga={manga} />
-              ))}
-            </div>
+          ) : displayedManga.length > 0 ? (
+            <>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                {displayedManga.map((manga) => (
+                  <MangaCard key={manga.id} manga={manga} />
+                ))}
+              </div>
+
+              {!search.trim() && filteredManga.length > 4 && (
+                <div className="mt-10 flex justify-center">
+                  <button
+                    onClick={() => setShowAll((prev) => !prev)}
+                    className="rounded-full bg-pink-500 px-8 py-3 font-semibold text-white shadow-md shadow-pink-200 transition hover:-translate-y-1 hover:bg-pink-600 hover:shadow-lg"
+                  >
+                    {showAll
+                      ? "Tampilkan Lebih Sedikit ↑"
+                      : "Lihat Semua Anime →"}
+                  </button>
+                </div>
+              )}
+            </>
           ) : (
             <p className="text-[#9B8292]">
               Anime tidak ditemukan.
