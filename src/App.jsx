@@ -1,15 +1,46 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import MangaCard from "./components/MangaCard";
-import { mangaList } from "./data/manga";
+import { fetchMangaList } from "./data/manga";
 
 import MangaDetail from "./pages/MangaDetail";
 import Reader from "./pages/Reader";
 
 function Home() {
   const [search, setSearch] = useState("");
+  const [mangaList, setMangaList] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadAnime() {
+      try {
+        setLoading(true);
+        setError(false);
+
+        const data = await fetchMangaList();
+
+        if (active) {
+          setMangaList(data);
+        }
+      } catch (err) {
+        console.error("Gagal mengambil anime:", err);
+        if (active) setError(true);
+      } finally {
+        if (active) setLoading(false);
+      }
+    }
+
+    loadAnime();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const filteredManga = mangaList.filter((manga) =>
     manga.title.toLowerCase().includes(search.toLowerCase())
@@ -17,7 +48,7 @@ function Home() {
 
   return (
     <>
-      <Navbar search={search} setSearch={setSearch} /> 
+      <Navbar search={search} setSearch={setSearch} />
 
       <main className="mx-auto max-w-7xl px-4 py-8">
         <section className="mb-10 rounded-2xl bg-linear-to-r from-pink-200 via-pink-100 to-white p-6 text-[#493545] shadow-sm sm:p-10">
@@ -41,7 +72,15 @@ function Home() {
             </h2>
           </div>
 
-          {filteredManga.length > 0 ? (
+          {loading ? (
+            <p className="py-10 text-center text-pink-500">
+              Sedang memuat anime...
+            </p>
+          ) : error ? (
+            <p className="py-10 text-center text-red-400">
+              Gagal mengambil data anime. Silakan coba lagi.
+            </p>
+          ) : filteredManga.length > 0 ? (
             <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {filteredManga.map((manga) => (
                 <MangaCard key={manga.id} manga={manga} />

@@ -55,7 +55,7 @@ function Navbar({ search, setSearch }) {
         </div>
 
         {/* SEARCH */}
-       <div className="flex w-[145px] shrink-0 items-center gap-2 rounded-full border border-pink-100 bg-pink-100 px-3 py-3 text-pink-500 transition-all duration-300 focus-within:border-pink-400 focus-within:ring-2 focus-within:ring-pink-200 sm:w-40 sm:px-5 md:w-44">
+       <div className="flex w-36.25 shrink-0 items-center gap-2 rounded-full border border-pink-100 bg-pink-100 px-3 py-3 text-pink-500 transition-all duration-300 focus-within:border-pink-400 focus-within:ring-2 focus-within:ring-pink-200 sm:w-40 sm:px-5 md:w-44">
 
   <svg
     xmlns="http://www.w3.org/2000/svg"
