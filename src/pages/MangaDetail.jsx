@@ -26,11 +26,11 @@ const chapterData = {
     },
   ],
 
-  "Girl und Panzer Motto motto Love sakusen": [
+  "Girls & Panzer: Motto Love Love Sakusen desu!": [
     {
       id: 1,
       links: [
-        { name: "Google Drive", url: "https://drive.google.com/drive/my-drive" },
+        { name: "Link Bluraynime", url: "https://bluraynime.my.id/?search=%5BBluraynime%5D+Silent+Witch+%3A+Chinmoku+no+Majo+no+Kakushigoto+%28BD+1080p%29" },
         { name: "Uptobox", url: "https://uptobox.com/" },
       ],
     },
@@ -228,7 +228,7 @@ function MangaDetail() {
 
                     <div>
                       <h3 className="font-semibold text-[#493545]">
-                        Episode {chapter.id}
+                        Link {chapter.id}
                       </h3>
                       <p className="mt-1 text-xs text-[#9B8292]">
                         Pilih server untuk menonton

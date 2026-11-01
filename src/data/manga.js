@@ -8,8 +8,8 @@ export const mangaList = [
   },
   {
     id: 2,
-    title: "Girl und Panzer Motto motto Love sakusen",
-    slug: "Girl und Panzer Motto motto Love sakusen",
+    title: "Girls & Panzer: Motto Love Love Sakusen desu!",
+    slug: "Girls & Panzer: Motto Love Love Sakusen desu!",
   },
   {
     id: 3,
